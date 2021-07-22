@@ -1,0 +1,20 @@
+.history-header {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.history-container {
+  background: #E1E2E7;
+  padding: 20px;
+  color: black;
+  box-shadow: 3px 3px 20px black;
+}
+
+.keyword-entry {
+  color: white;
+  margin-left: 50px;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black;
+}

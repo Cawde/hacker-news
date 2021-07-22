@@ -1,0 +1,27 @@
+.header-containter {
+  display: flex;
+  justify-items: center;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.search-results {
+  background: #E1E2E7;
+  padding: 20px;
+  box-shadow: 3px 3px 20px black;
+}
+
+a {
+  color: #98042D;
+}
+
+.page-number {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}

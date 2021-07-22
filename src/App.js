@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  Search,
+  History,
+  Navigation
+} from "./components";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [history, setHistory] = useState([]);
+  const [keywords, setKeywords] = useState(new Set());
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Router>
+        <Navigation/>
+        <Switch>
+        <Route path="/history">
+            <History
+              history={history}
+              keywords={keywords}
+            />
+          </Route>
+          <Route path="/*">
+            <Search
+              history={history}
+              setHistory={setHistory}
+              keywords={keywords}
+              setKeywords={setKeywords}
+            />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
